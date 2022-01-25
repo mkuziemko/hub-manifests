@@ -51,8 +51,6 @@ spec:
                 - name: input-parameters
                 - name: runner-context
                 - name: tfstate
-                - name: additional
-                  optional: true
             outputs:
               artifacts:
                 - name: terraform-release
