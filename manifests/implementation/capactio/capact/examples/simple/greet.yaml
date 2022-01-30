@@ -45,7 +45,7 @@ spec:
     runnerInterface: argo.run
     args:
       workflow:
-        entrypoint: simple
+        entrypoint: ""
         templates:
         - name: simple
           steps:

@@ -40,7 +40,6 @@ spec:
     runnerInterface: argo.run
     args:
       workflow:
-        entrypoint: say
         templates:
         - name: say
           container:
