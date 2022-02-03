@@ -27,7 +27,7 @@ spec:
           }
         ],
         "required": [
-           "name"
+           "endpoint"
         ],
         "properties": {
           "endpoint": {
