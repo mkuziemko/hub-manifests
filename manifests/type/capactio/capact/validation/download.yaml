@@ -34,5 +34,5 @@ spec:
            "title": "Key"
           }
         },
-        "additionalProperties": false
+        "additionalProperties": true
       }

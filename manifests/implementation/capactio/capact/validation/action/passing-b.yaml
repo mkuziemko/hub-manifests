@@ -38,9 +38,7 @@ spec:
         - name: single-key
           alias: injected
           revision: 0.1.0
-    cap.core.type.hub.storage:
-      allOf:
-        - name: cap.type.helm.storage
+        - name: storage
           revision: 0.1.0
           alias: helm-storage
 
@@ -86,4 +84,4 @@ spec:
             container:
               image: alpine:latest
               command: ["sh", "-c"]
-              args: ["echo 'Implementation B' && cp /input /upload && printf 'value:\n key:  \"true\"\nbackend:\n  context:\n    name: test\n    namespace: test' > /upload && sleep 1"]
+              args: ["echo 'Implementation B' && cp /input /upload && sleep 1"]
