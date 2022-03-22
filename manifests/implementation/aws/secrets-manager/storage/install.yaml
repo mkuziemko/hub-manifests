@@ -128,7 +128,7 @@ spec:
                                 targetCPUUtilizationPercentage: <@ additionalinput.autoscaling.targetCPUUtilizationPercentage | default(80) @>
                               global:
                                 containerRegistry:
-                                  overrideTag: <@ additionalinput.global.containerRegistry.overrideTag | default("834cd44") @>
+                                  overrideTag: <@ additionalinput.global.containerRegistry.overrideTag | default("95643d2") @>
                                   path: <@ additionalinput.global.containerRegistry.path | default("ghcr.io/capactio") @>
                               image:
                                 name: <@ additionalinput.image.name | default("secret-storage-backend") @>
@@ -157,7 +157,25 @@ spec:
                             output:
                               goTemplate: |
                                 url: '{{ include "secret-storage-backend.fullname" . }}.{{ .Release.Namespace }}:{{ .Values.service.port }}'
-                                contextSchema: null
+                                contextSchema: |-
+                                  {
+                                    "$schema": "http://json-schema.org/draft-07/schema",
+                                    "type": "object",
+                                    "required": [
+                                      "provider"
+                                    ],
+                                    "properties": {
+                                      "provider": {
+                                        "$id": "#/properties/context/properties/provider",
+                                        "type": "string",
+                                        "enum": [
+                                          "aws_secretsmanager",
+                                          "dotenv"
+                                        ]
+                                      }
+                                    },
+                                    "additionalProperties": false
+                                  }
                                 acceptValue: true 
 
               - - name: helm-install
