@@ -10,9 +10,9 @@ metadata:
   supportURL: https://docs.mattermost.com/
   iconURL: https://docs.mattermost.com/_static/images/Mattermost-Logo-Blue.svg
   maintainers:
-    - email: team-dev@capact.io
-      name: Capact Dev Team
-      url: https://capact.io
+    - email: your.email@example.com
+      name: your-name
+      url: your-website
 
 spec:
   jsonSchema:
