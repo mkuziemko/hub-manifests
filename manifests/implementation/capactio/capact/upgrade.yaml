@@ -91,7 +91,7 @@ spec:
                         from: "{{inputs.artifacts.input-parameters}}"
                       - name: configuration
                         raw:
-                          data: ""
+                          data: "unpackValue: true"
 
                 - name: gen-neo4j-helm-args
                   capact-action: jinja2.template
@@ -116,7 +116,7 @@ spec:
                         from: "{{inputs.artifacts.input-parameters}}"
                       - name: configuration
                         raw:
-                          data: ""
+                          data: "unpackValue: true"
                 - name: gen-capact-helm-args
                   capact-action: jinja2.template
                   arguments:
@@ -147,7 +147,7 @@ spec:
                         from: "{{inputs.artifacts.input-parameters}}"
                       - name: configuration
                         raw:
-                          data: ""
+                          data: "unpackValue: true"
 
               - - name: neo4j-upgrade
                   capact-action: helm.upgrade
