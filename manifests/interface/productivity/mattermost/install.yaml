@@ -16,14 +16,14 @@ metadata:
 
 spec:
   input:
-    parameters:
+    parameters: # the Interface requires `input-parameters` of Type "cap.type.productivity.mattermost.install-input"
       input-parameters:
         typeRef:
           path: cap.type.productivity.mattermost.install-input
           revision: 0.1.0
 
   output:
-    typeInstances:
+    typeInstances: # the Interface outputs TypeInstance of Type "cap.type.productivity.mattermost.config"
       mattermost-config:
         typeRef:
           path: cap.type.productivity.mattermost.config
